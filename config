@@ -1,0 +1,10 @@
+Host github.com-elissaDI
+  HostName github.com
+  User git
+  IdentityFile ./elissa.txt
+
+
+Host github.com-debugBeast
+  HostName github.com
+  User git
+  IdentityFile ./debugger.txt
