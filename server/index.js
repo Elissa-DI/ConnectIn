@@ -11,6 +11,7 @@ import json from 'jsonwebtoken'
 import { fileURLToPath } from 'url';
 import AuthRoutes from "./routes/auth.js"
 import { register } from './controllers/auth';
+import { verifyToken } from './middleware/auth.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
