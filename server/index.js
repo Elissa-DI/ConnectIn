@@ -34,11 +34,15 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+// ROUTES WITH FILES
+
+app.post("auth/register", upload.single("picture"), register);
+
 // MONGOOSE SETUP
 const PORT = process.env.PORT || 5005;
 mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    UseUnififedTopology: true,
+    // useNewUrlParser: true,
+    // UseUnifiedTopology: true,
 }).then(() => {
     app.listen(PORT, () => console.log(`💪Server running at Port: ${PORT}`))
 })
