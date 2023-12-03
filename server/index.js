@@ -7,9 +7,10 @@ import multer from 'multer';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
-import json from 'jsonwebtoken'
+import json from 'jsonwebtoken';
 import { fileURLToPath } from 'url';
-import AuthRoutes from "./routes/auth.js"
+import AuthRoutes from "./routes/auth.js";
+import userRoutes from "./routes/users.js";
 import { register } from './controllers/auth';
 import { verifyToken } from './middleware/auth.js';
 
@@ -42,6 +43,7 @@ app.post("auth/register", upload.single("picture"), register);
 
 // ROUTES
 app.use("/auth", AuthRoutes);
+app.use("/user", userRoutes);
 
 // MONGOOSE SETUP
 const PORT = process.env.PORT || 5005;
