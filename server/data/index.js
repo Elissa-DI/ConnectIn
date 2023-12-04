@@ -251,3 +251,35 @@ export const posts = [
       [userIds[5], true],
       [userIds[7], true],
     ]),
+    comments: [
+      "I lied again, one more random comment",
+      "Why am I doing this?",
+      "Man I'm bored",
+      "What should I do?",
+      "I'm going to play video games",
+    ],
+  },
+  {
+    _id: new mongoose.Types.ObjectId(),
+    userId: userIds[7],
+    firstName: "Jessica",
+    lastName: "Dunn",
+    location: "Washington, DC",
+    description:
+      "For the last time, I'm going to play video games now. I'm tired of typing. I'm going to play video games now.",
+    picturePath: "post6.jpeg",
+    userPicturePath: "p9.jpeg",
+    likes: new Map([
+      [userIds[1], true],
+      [userIds[2], true],
+    ]),
+
+    comments: [
+      "Can I play video games now?",
+      "No let's actually study",
+      "Never mind, I'm going to play video games",
+      "Stop it.",
+      "Michael, stop it.",
+    ],
+  },
+];
