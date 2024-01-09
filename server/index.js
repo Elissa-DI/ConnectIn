@@ -61,6 +61,7 @@ mongoose
   })
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+    console.log("Connected to mongoDB😁");
 
     /* ADD DATA ONE TIME */
     // User.insertMany(users);
